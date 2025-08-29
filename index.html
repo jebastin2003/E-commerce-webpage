@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyShop - E-Commerce</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="navbar">
+      <div class="logo">MyShop</div>
+      <div class="search-bar">
+        <input type="text" id="search" placeholder="Search for products, brands and more...">
+        <button>🔍</button>
+      </div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Categories</a>
+        <a href="#">Deals</a>
+        <a href="#" onclick="toggleCart()">🛒 Cart (<span id="cart-count">0</span>)</a>
+        <a href="#">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <h1>Welcome to MyShop</h1>
+    <p>Best deals on electronics, fashion, and more!</p>
+    <button>Shop Now</button>
+  </section>
+
+  <!-- Categories -->
+  <section class="categories">
+    <h2>Shop by Category</h2>
+    <div class="category-grid">
+      <div class="category-card">Electronics</div>
+      <div class="category-card">Fashion</div>
+      <div class="category-card">Home</div>
+      <div class="category-card">Grocery</div>
+      <div class="category-card">Sports</div>
+      <div class="category-card">Books</div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <main>
+    <h2>Our Products</h2>
+    <div class="product-grid" id="product-list">
+      <!-- Products will load here -->
+    </div>
+  </main>
+
+  <!-- Cart Section -->
+  <div class="cart" id="cart">
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+    <p>Total: ₹<span id="cart-total">0</span></p>
+    <button onclick="clearCart()">Clear Cart</button>
+    <button onclick="showOrderForm()">Order</button>
+  </div>
+
+  <!-- Order Form -->
+  <div class="order-form" id="order-form">
+    <h3>Enter Delivery Details</h3>
+    <label>Date: <input type="date" id="delivery-date"></label><br><br>
+    <label>Address:</label><br>
+    <textarea id="delivery-address" rows="3" placeholder="Enter your address"></textarea><br>
+    <button onclick="placeOrder()">Place Order</button>
+    <button onclick="hideOrderForm()">Cancel</button>
+  </div>
+
+  <!-- Notification -->
+  <div class="notification" id="notification">✅ Your order has been placed!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
